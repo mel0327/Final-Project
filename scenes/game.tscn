@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://j7mgidildiuf"]
+[gd_scene load_steps=10 format=3 uid="uid://j7mgidildiuf"]
 
 [ext_resource type="PackedScene" uid="uid://cb5noe7vq10e4" path="res://scenes/player.tscn" id="1_w45pu"]
 [ext_resource type="Texture2D" uid="uid://cibgc67klny2s" path="res://assets/sprites/world_tileset.png" id="2_k0wvn"]
 [ext_resource type="PackedScene" uid="uid://bnymcqk0pw6e5" path="res://scenes/platform.tscn" id="3_i5eis"]
+[ext_resource type="PackedScene" uid="uid://dvijtxfhstlc0" path="res://scenes/coin.tscn" id="4_hivp5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ne3jp"]
 texture = ExtResource("2_k0wvn")
@@ -429,6 +430,21 @@ texture = ExtResource("2_k0wvn")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ne3jp")
 
+[sub_resource type="Animation" id="Animation_xt7fd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(386, 69)]
+}
+
 [sub_resource type="Animation" id="Animation_tl2je"]
 resource_name = "move"
 length = 1.5
@@ -444,21 +460,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(386, 69), Vector2(479, 69)]
-}
-
-[sub_resource type="Animation" id="Animation_xt7fd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(386, 69)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xl0tu"]
@@ -493,3 +494,21 @@ libraries = {
 "": SubResource("AnimationLibrary_xl0tu")
 }
 autoplay = "move"
+
+[node name="Coin" parent="." instance=ExtResource("4_hivp5")]
+position = Vector2(88, 86)
+
+[node name="Coin2" parent="." instance=ExtResource("4_hivp5")]
+position = Vector2(233, 86)
+
+[node name="Coin3" parent="." instance=ExtResource("4_hivp5")]
+position = Vector2(248, 86)
+
+[node name="Coin4" parent="." instance=ExtResource("4_hivp5")]
+position = Vector2(120, -28)
+
+[node name="Coin5" parent="." instance=ExtResource("4_hivp5")]
+position = Vector2(520, 53)
+
+[node name="Coin6" parent="." instance=ExtResource("4_hivp5")]
+position = Vector2(417, 65)
