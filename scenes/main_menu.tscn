@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6lrd7ool511q"]
+[gd_scene load_steps=5 format=3 uid="uid://c6lrd7ool511q"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_fmx6g"]
 [ext_resource type="FontFile" uid="uid://dqti6aw3v6ibe" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_pmpt5"]
+[ext_resource type="Texture2D" uid="uid://c5brjt6w5rsxu" path="res://scenes/Background.jpg" id="2_c42es"]
 [ext_resource type="FontFile" uid="uid://n41f6kpncwcs" path="res://assets/fonts/PixelOperator8.ttf" id="2_ye8ci"]
 
 [node name="MainMenu" type="Control"]
@@ -12,6 +13,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fmx6g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_c42es")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -41,7 +51,7 @@ theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 24
 theme_override_fonts/font = ExtResource("1_pmpt5")
 theme_override_font_sizes/font_size = 64
-text = "Game Title"
+text = "Platformer Game"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
@@ -60,6 +70,8 @@ layout_mode = 2
 [node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("2_ye8ci")
 theme_override_font_sizes/font_size = 32
 text = "Start Game"
@@ -67,6 +79,8 @@ text = "Start Game"
 [node name="QuitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("2_ye8ci")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
