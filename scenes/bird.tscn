@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://bxskt7ktvva3w"]
+
+[ext_resource type="PackedScene" uid="uid://b3sgxrwssvy1o" path="res://scenes/killzone.tscn" id="1_h24ws"]
+[ext_resource type="Script" path="res://scenes/bird.gd" id="1_jafy2"]
+[ext_resource type="Texture2D" uid="uid://cvrg0aipq6mpx" path="res://assets/BirdM_0000_Capa-1.png" id="1_x5nvd"]
+[ext_resource type="Texture2D" uid="uid://cxhcykcx3pbbf" path="res://assets/BirdM_0001_Capa-2.png" id="2_xgud5"]
+[ext_resource type="Texture2D" uid="uid://dj8bfqcmaf7c" path="res://assets/BirdM_0002_Capa-3.png" id="3_xs5h7"]
+[ext_resource type="Texture2D" uid="uid://st77cng8ha1d" path="res://assets/BirdM_0003_Capa-0.png" id="4_5cy34"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2mutc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x5nvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xgud5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xs5h7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5cy34")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2abta"]
+radius = 3.0
+height = 6.0
+
+[node name="Bird" type="Node2D"]
+script = ExtResource("1_jafy2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.38419e-07, 0)
+scale = Vector2(0.0206044, 0.0237393)
+sprite_frames = SubResource("SpriteFrames_2mutc")
+autoplay = "default"
+frame_progress = 0.814881
+flip_h = true
+
+[node name="Killzone" parent="." instance=ExtResource("1_h24ws")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_2abta")
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-5, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(5, 0)
