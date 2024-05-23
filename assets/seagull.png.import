@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvrg0aipq6mpx"
-path="res://.godot/imported/BirdM_0000_Capa-1.png-78df15d89505e389351b8129bac94449.ctex"
+uid="uid://t1n7w3qqpvm"
+path="res://.godot/imported/seagull.png-fc8abdae18f3f6af8bad0546161b163a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BirdM_0000_Capa-1.png"
-dest_files=["res://.godot/imported/BirdM_0000_Capa-1.png-78df15d89505e389351b8129bac94449.ctex"]
+source_file="res://assets/seagull.png"
+dest_files=["res://.godot/imported/seagull.png-fc8abdae18f3f6af8bad0546161b163a.ctex"]
 
 [params]
 
