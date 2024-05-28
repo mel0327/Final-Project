@@ -1,51 +1,62 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxskt7ktvva3w"]
+[gd_scene load_steps=10 format=3 uid="uid://bxskt7ktvva3w"]
 
 [ext_resource type="PackedScene" uid="uid://b3sgxrwssvy1o" path="res://scenes/killzone.tscn" id="1_h24ws"]
 [ext_resource type="Script" path="res://scenes/bird.gd" id="1_jafy2"]
-[ext_resource type="Texture2D" uid="uid://cvrg0aipq6mpx" path="res://assets/BirdM_0000_Capa-1.png" id="1_x5nvd"]
-[ext_resource type="Texture2D" uid="uid://cxhcykcx3pbbf" path="res://assets/BirdM_0001_Capa-2.png" id="2_xgud5"]
-[ext_resource type="Texture2D" uid="uid://dj8bfqcmaf7c" path="res://assets/BirdM_0002_Capa-3.png" id="3_xs5h7"]
-[ext_resource type="Texture2D" uid="uid://st77cng8ha1d" path="res://assets/BirdM_0003_Capa-0.png" id="4_5cy34"]
+[ext_resource type="Texture2D" uid="uid://dhjlpwol6rnr8" path="res://assets/sprites/seagull.png" id="2_0jpaf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_soudw"]
+atlas = ExtResource("2_0jpaf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r70mp"]
+atlas = ExtResource("2_0jpaf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e15kr"]
+atlas = ExtResource("2_0jpaf")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc13i"]
+atlas = ExtResource("2_0jpaf")
+region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2mutc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_x5nvd")
+"texture": SubResource("AtlasTexture_soudw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_xgud5")
+"texture": SubResource("AtlasTexture_r70mp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_xs5h7")
+"texture": SubResource("AtlasTexture_e15kr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_5cy34")
+"texture": SubResource("AtlasTexture_dc13i")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Default",
 "speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2abta"]
-radius = 3.0
-height = 6.0
+radius = 2.0
+height = 4.0
 
 [node name="Bird" type="Node2D"]
 script = ExtResource("1_jafy2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2.38419e-07, 0)
-scale = Vector2(0.0206044, 0.0237393)
+position = Vector2(0, -1)
+scale = Vector2(0.2, 0.229)
 sprite_frames = SubResource("SpriteFrames_2mutc")
-autoplay = "default"
-frame_progress = 0.814881
-flip_h = true
+animation = &"Default"
+autoplay = "Default"
 
 [node name="Killzone" parent="." instance=ExtResource("1_h24ws")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_2abta")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
