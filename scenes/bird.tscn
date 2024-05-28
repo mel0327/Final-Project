@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b3sgxrwssvy1o" path="res://scenes/killzone.tscn" id="1_h24ws"]
 [ext_resource type="Script" path="res://scenes/bird.gd" id="1_jafy2"]
-[ext_resource type="Texture2D" uid="uid://t1n7w3qqpvm" path="res://assets/seagull.png" id="2_nuf8m"]
+[ext_resource type="Texture2D" path="res://assets/seagull.png" id="2_nuf8m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_55tlg"]
 atlas = ExtResource("2_nuf8m")
@@ -41,14 +41,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2abta"]
-radius = 1.0
-height = 2.0
+radius = 2.0
+height = 4.0
 
 [node name="Bird" type="Node2D"]
 script = ExtResource("1_jafy2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.0728022, 0.0743697)
+position = Vector2(-1, -1)
+scale = Vector2(0.2, 0.229)
 sprite_frames = SubResource("SpriteFrames_2mutc")
 autoplay = "default"
 frame_progress = 0.814881
@@ -59,7 +60,7 @@ frame_progress = 0.814881
 shape = SubResource("CapsuleShape2D_2abta")
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
-target_position = Vector2(-2, 0)
+target_position = Vector2(-5, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
-target_position = Vector2(2, 0)
+target_position = Vector2(5, 0)

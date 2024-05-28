@@ -621,4 +621,4 @@ position = Vector2(838, 8)
 
 [node name="Bird" parent="." instance=ExtResource("12_gser8")]
 position = Vector2(-29, 0)
-scale = Vector2(10, 10)
+scale = Vector2(3, 3)
