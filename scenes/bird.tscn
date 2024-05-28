@@ -2,41 +2,41 @@
 
 [ext_resource type="PackedScene" uid="uid://b3sgxrwssvy1o" path="res://scenes/killzone.tscn" id="1_h24ws"]
 [ext_resource type="Script" path="res://scenes/bird.gd" id="1_jafy2"]
-[ext_resource type="Texture2D" path="res://assets/seagull.png" id="2_nuf8m"]
+[ext_resource type="Texture2D" uid="uid://csvy67m4kyvy4" path="res://assets/sprites/seagull.png" id="2_0jpaf"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_55tlg"]
-atlas = ExtResource("2_nuf8m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_f54es"]
+atlas = ExtResource("2_0jpaf")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s4r1w"]
-atlas = ExtResource("2_nuf8m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tb43y"]
+atlas = ExtResource("2_0jpaf")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_aeks4"]
-atlas = ExtResource("2_nuf8m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6sdo"]
+atlas = ExtResource("2_0jpaf")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6svgs"]
-atlas = ExtResource("2_nuf8m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydfmg"]
+atlas = ExtResource("2_0jpaf")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2mutc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_55tlg")
+"texture": SubResource("AtlasTexture_f54es")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_s4r1w")
+"texture": SubResource("AtlasTexture_tb43y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_aeks4")
+"texture": SubResource("AtlasTexture_j6sdo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6svgs")
+"texture": SubResource("AtlasTexture_ydfmg")
 }],
 "loop": true,
-"name": &"default",
+"name": &"new_animation",
 "speed": 10.0
 }]
 
@@ -48,11 +48,11 @@ height = 4.0
 script = ExtResource("1_jafy2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -1)
+position = Vector2(0, -1)
 scale = Vector2(0.2, 0.229)
 sprite_frames = SubResource("SpriteFrames_2mutc")
-autoplay = "default"
-frame_progress = 0.814881
+animation = &"new_animation"
+autoplay = "new_animation"
 
 [node name="Killzone" parent="." instance=ExtResource("1_h24ws")]
 
