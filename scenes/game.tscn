@@ -629,9 +629,5 @@ position = Vector2(138, 17)
 position = Vector2(838, 8)
 
 [node name="Bird" parent="." instance=ExtResource("12_gser8")]
-<<<<<<< HEAD
-position = Vector2(-38, 3)
-=======
 position = Vector2(-40, 6)
->>>>>>> Landscape
 scale = Vector2(4, 4)

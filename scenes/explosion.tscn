@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://u81pwc281y12"]
+
+[ext_resource type="Script" path="res://scripts/Explosion.gd" id="1_cc8sg"]
+
+[sub_resource type="Curve" id="Curve_ppqvr"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.148834), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_afvah"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_ojkic"]
+min_value = -1.0
+_data = [Vector2(0, 0.157138), 0.0, 0.0, 0, 0, Vector2(1, -0.980518), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Explosion" type="Node2D"]
+script = ExtResource("1_cc8sg")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 50
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 0.5
+spread = 180.0
+gravity = Vector2(2.08165e-12, 2.08165e-12)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_ppqvr")
+color = Color(1, 1, 0, 1)
+color_ramp = SubResource("Gradient_afvah")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("Curve_ojkic")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
