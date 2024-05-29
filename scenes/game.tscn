@@ -614,15 +614,18 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Explosion" parent="." instance=ExtResource("10_lw57i")]
+visible = false
 position = Vector2(568, -109)
 
 [node name="Explosion2" parent="." instance=ExtResource("10_lw57i")]
+visible = false
 position = Vector2(605, -144)
 rotation = -3.89383
 scale = Vector2(1.25, 1.25)
 skew = -0.148353
 
 [node name="Explosion3" parent="." instance=ExtResource("10_lw57i")]
+visible = false
 position = Vector2(648, -122)
 scale = Vector2(0.75, 0.75)
 skew = -0.521853
