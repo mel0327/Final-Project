@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b3sgxrwssvy1o" path="res://scenes/killzone.tscn" id="1_h24ws"]
 [ext_resource type="Script" path="res://scenes/bird.gd" id="1_jafy2"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://csvy67m4kyvy4" path="res://assets/sprites/seagull.png" id="2_0jpaf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f54es"]
@@ -17,6 +18,23 @@ atlas = ExtResource("2_0jpaf")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ydfmg"]
+=======
+[ext_resource type="Texture2D" uid="uid://dhjlpwol6rnr8" path="res://assets/sprites/seagull.png" id="2_0jpaf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_soudw"]
+atlas = ExtResource("2_0jpaf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r70mp"]
+atlas = ExtResource("2_0jpaf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e15kr"]
+atlas = ExtResource("2_0jpaf")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc13i"]
+>>>>>>> Landscape
 atlas = ExtResource("2_0jpaf")
 region = Rect2(32, 32, 32, 32)
 
@@ -24,6 +42,7 @@ region = Rect2(32, 32, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+<<<<<<< HEAD
 "texture": SubResource("AtlasTexture_f54es")
 }, {
 "duration": 1.0,
@@ -37,6 +56,21 @@ animations = [{
 }],
 "loop": true,
 "name": &"new_animation",
+=======
+"texture": SubResource("AtlasTexture_soudw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r70mp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e15kr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dc13i")
+}],
+"loop": true,
+"name": &"Default",
+>>>>>>> Landscape
 "speed": 10.0
 }]
 
@@ -51,8 +85,13 @@ script = ExtResource("1_jafy2")
 position = Vector2(0, -1)
 scale = Vector2(0.2, 0.229)
 sprite_frames = SubResource("SpriteFrames_2mutc")
+<<<<<<< HEAD
 animation = &"new_animation"
 autoplay = "new_animation"
+=======
+animation = &"Default"
+autoplay = "Default"
+>>>>>>> Landscape
 
 [node name="Killzone" parent="." instance=ExtResource("1_h24ws")]
 

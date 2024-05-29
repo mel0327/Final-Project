@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://csvy67m4kyvy4"
+=======
+uid="uid://dhjlpwol6rnr8"
+>>>>>>> Landscape
 path="res://.godot/imported/seagull.png-bae1d8faa6b9051b8179920190c82b36.ctex"
 metadata={
 "vram_texture": false
